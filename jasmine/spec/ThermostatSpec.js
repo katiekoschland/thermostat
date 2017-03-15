@@ -24,8 +24,7 @@ describe("Thermostat", function(){
 
   describe("Using the thermostat", function() {
     beforeEach(function() {
-      thermostat.currentTemperature = 20;
-      thermostat.powerSavingOn;
+      thermostat = new Thermostat()
     });
 
     describe("Up", function() {
@@ -33,6 +32,23 @@ describe("Thermostat", function(){
         thermostat.up();
         expect(thermostat.getCurrentTemperature()).toEqual(21);
       });
+
+      it("cannot be increased above the maximum temperature", function(){
+        for (i=1; i < 7; i++ ) {
+          thermostat.up();
+        };
+        expect(thermostat.getCurrentTemperature()).toEqual(25);
+      });
+
+      it("cannot be increased above the maximum temperature", function(){
+        thermostat.powerSavingOff()
+        for (i=1; i < 14; i++ ) {
+          thermostat.up();
+        };
+        expect(thermostat.getCurrentTemperature()).toEqual(32);
+      });
+
+
     });
 
     describe("Down", function() {

@@ -14,13 +14,16 @@ Thermostat.prototype.getCurrentTemperature = function () {
 };
 
 Thermostat.prototype.up = function() {
+  if (this.currentTemperature === this.maximumTemperature) {
+    return;
+  };
   this.currentTemperature ++;
 };
 
 Thermostat.prototype.down = function() {
   if (this.currentTemperature === this.minimumTemperature) {
     return;
-  }
+  };
   this.currentTemperature --;
 };
 
