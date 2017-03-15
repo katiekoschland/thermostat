@@ -15,8 +15,17 @@ Thermostat.prototype.down = function() {
   this.currentTemperature --;
 };
 
+Thermostat.prototype.reset = function() {
+  this.currentTemperature = 20;
+};
+
 Thermostat.prototype.powerSavingOff = function() {
   this.powerSavingMode = false;
+  this._determineMaxTemperature();
+};
+
+Thermostat.prototype.powerSavingOn = function() {
+  this.powerSavingMode = true;
   this._determineMaxTemperature();
 };
 
