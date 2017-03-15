@@ -35,5 +35,10 @@ Thermostat.prototype._determineMaxTemperature = function() {
   } else {
     return this.maximumTemperature = 32;
   };
+};
 
+Thermostat.prototype.checkEnergyUsage = function() {
+  if (this.currentTemperature < 18 ){
+    return  "low";
+  };
 };

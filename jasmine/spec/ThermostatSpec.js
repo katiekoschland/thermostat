@@ -13,14 +13,18 @@ describe("Thermostat", function(){
     expect(thermostat.powerSavingMode).toBe(true);
   });
 
-  it('power saving is on by default', function(){
+  it('has a max temperature of 25 when power saving on', function(){
     expect(thermostat.maximumTemperature).toEqual(25);
   });
 
-  describe("Using the thermostat", function() {
+  it('has a max temperature of 32 when power saving off', function(){
+    thermostat.powerSavingOff();
+    expect(thermostat.maximumTemperature).toEqual(32);
+  });
+
+  describe("Temperature change", function() {
     beforeEach(function() {
       thermostat.currentTemperature = 20;
-      thermostat.powerSavingOn();
     });
 
     describe("Up", function() {
@@ -37,25 +41,10 @@ describe("Thermostat", function(){
       });
     });
 
-    describe("Reset", function() {
-      it("resets the temperature to 20", function() {
-        thermostat.up();
-        thermostat.reset();
-        expect(thermostat.currentTemperature).toBe(20);
-      });
-    });
-
-    describe("Mode", function() {
-
-      it('has a max temperature of 32 when power saving off', function(){
-        thermostat.powerSavingOff();
-        expect(thermostat.maximumTemperature).toEqual(32);
-      });
-
-      it('has a max temperature of 25 when power saving is turned on', function(){
-        thermostat.powerSavingOff();
-        thermostat.powerSavingOn();
-        expect(thermostat.maximumTemperature).toEqual(25);
+    describe("check energy usage", function(){
+      it("shows low energy usage", function(){
+        for(i=1; i < 4; i++){thermostat.down()};
+        expect(thermostat.checkEnergyUsage()).toEqual("low")
       });
     });
 
