@@ -1,3 +1,5 @@
+'use strict';
+
 function Thermostat(){
   this.minimumTemperature = MINIMUM_TEMPERATURE;
   this.currentTemperature = 20;
@@ -7,11 +9,18 @@ function Thermostat(){
 
 const MINIMUM_TEMPERATURE = 10;
 
+Thermostat.prototype.getCurrentTemperature = function () {
+  return this.currentTemperature;
+};
+
 Thermostat.prototype.up = function() {
   this.currentTemperature ++;
 };
 
 Thermostat.prototype.down = function() {
+  if (this.currentTemperature === this.minimumTemperature) {
+    return;
+  }
   this.currentTemperature --;
 };
 
@@ -40,5 +49,9 @@ Thermostat.prototype._determineMaxTemperature = function() {
 Thermostat.prototype.checkEnergyUsage = function() {
   if (this.currentTemperature < 18 ){
     return  "low";
+  } else if (this.currentTemperature < 25) {
+    return "medium";
+  } else {
+    return "high";
   };
 };
