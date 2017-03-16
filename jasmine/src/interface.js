@@ -4,15 +4,18 @@ $(document).ready(function(){
   $('h1').text("THERMOSTAT");
   $("#currentTemp").text(thermostat.currentTemperature);
   $("#powerSavingMode").text(thermostat.powerSavingMode);
+  $("#energyUsage").text(thermostat.checkEnergyUsage());
 
   $("#up").on("click", function() {
     thermostat.up();
     $("#currentTemp").text(thermostat.currentTemperature);
+    $("#energyUsage").text(thermostat.checkEnergyUsage());
   })
 
   $("#down").on("click", function() {
     thermostat.down();
     $("#currentTemp").text(thermostat.currentTemperature);
+    $("#energyUsage").text(thermostat.checkEnergyUsage());
   })
 
   $("#reset").on("click", function() {

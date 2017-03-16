@@ -90,10 +90,12 @@ describe("Thermostat", function(){
     describe("check energy usage", function(){
       it("shows low energy usage", function(){
         for(i=1; i < 4; i++){thermostat.down()};
+
         expect(thermostat.checkEnergyUsage()).toEqual("low")
       });
 
       it("shows medium energy usage", function(){
+
         expect(thermostat.checkEnergyUsage()).toEqual("medium")
       });
 
@@ -101,6 +103,8 @@ describe("Thermostat", function(){
         for(i = 1; i < 6; i++) {
           thermostat.up();
         };
+        console.log(thermostat.currentTemperature)
+        console.log(thermostat.checkEnergyUsage())
         expect(thermostat.checkEnergyUsage()).toEqual("high")
       });
 
