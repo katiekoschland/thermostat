@@ -3,7 +3,6 @@ $(document).ready(function(){
     updateTemperature()
 
   $('h1').text("THERMOSTAT");
-  // $("#currentTemp").text(thermostat.currentTemperature);
   $("#powerSavingMode").text(thermostat.powerSavingMode);
   $("#energyUsage").text(thermostat.checkEnergyUsage());
 
@@ -41,4 +40,12 @@ $(document).ready(function(){
     $("#currentTemp").text(thermostat.currentTemperature);
     $("#currentTemp").attr('class', thermostat.checkEnergyUsage());
   }
+
+    $.get("http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=948bcac04c4c2646c9fcd6f1d5d4b4d0&units=metric",
+        function(data) {
+          $("#outside-temp").text(data.main.temp);
+        })
+
+
+
 });

@@ -103,8 +103,6 @@ describe("Thermostat", function(){
         for(i = 1; i < 6; i++) {
           thermostat.up();
         };
-        console.log(thermostat.currentTemperature)
-        console.log(thermostat.checkEnergyUsage())
         expect(thermostat.checkEnergyUsage()).toEqual("high")
       });
 
