@@ -2,7 +2,7 @@ $(document).ready(function(){
   var thermostat = new Thermostat();
     updateTemperature()
 
-  $('h1').text("THERMOSTAT");
+  // $('h1').text("THERMOSTAT");
   $("#powerSavingMode").text(thermostat.powerSavingMode);
   $("#energyUsage").text(thermostat.checkEnergyUsage());
 
@@ -38,7 +38,7 @@ $(document).ready(function(){
 
   function updateTemperature() {
     $("#currentTemp").text(thermostat.currentTemperature);
-    $("#currentTemp").attr('class', thermostat.checkEnergyUsage());
+    $("#outer").attr('class', thermostat.checkEnergyUsage());
   }
 
   function cityTemp() {

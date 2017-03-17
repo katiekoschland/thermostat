@@ -1,48 +1,85 @@
-.low {
-  font-size: 45px;
+#currentTemp{
+  font-size: 60px;
   position: relative;
-  left: 35%; top: 35%;
+  left: 40%; top: 35%;
+  color: white;
+  font-family: 'Lobster', cursive;
 }
 
-.medium {
-  font-size: 45px;
-  position: relative;
-  left: 35%; top: 35%;
+h1{
+  font-family: 'Lobster', cursive;
+  font-size: 70px;
+  color: #fdda16;
+
 }
 
-.high {
-  font-size: 45px;
+.down {
   position: relative;
-  left: 35%; top: 35%;
+  left: 0%;
+  margin-top: 5%;
+  background-color: transparent;
+  border: transparent 0px;
 }
 
-body{ background-color: #7ec0e4}
+.up {
+  position: absolute;
+  left: 70%;
+  margin-top: 4%;
+  background-color: transparent;
+  border: transparent 0px;
+}
+
+
+body{ background-image: url('../public/bg_pic.jpg');
+width:300px;
+margin: auto;
+}
 
 #outerborder{
   width: 300px; height: 300px;
   background-color: black;
   border-radius: 50%;
+  box-shadow:
+    inset 0 3px 10px rgba(255,255,255,1),
+    inset 0 -3px 10px rgba(0,0,0,0.25),
+    0 30px 40px rgba(0,0,0,0.5);
 }
 
-#outer{
-  width: 98%; height: 98%;
+.medium{
+  width: 95%; height: 95%;
   background-color: #f9d00f;
   position: relative;
-  left: 1.0%; top: 1.0%;
+  left: 2.5%; top: 2.5%;
+  border-radius: 50%;
+}
+
+.low{
+  width: 95%; height: 95%;
+  background-color: #55a44e;
+  position: relative;
+  left: 2.5%; top: 2.5%;
+  border-radius: 50%;
+}
+
+.high{
+  width: 95%; height: 95%;
+  background-color: #f92727;
+  position: relative;
+  left: 2.5%; top: 2.5%;
   border-radius: 50%;
 }
 
 #innerborder{
-  width: 50%; height: 50%;
+  width: 90%; height: 90%;
   background-color: black;
   position: relative;
-  left: 25.0%; top: 25.0%;
+  left: 5.0%; top: 5.0%;
   border-radius: 50%;
 }
 
 #inner{
   width: 96%; height: 96%;
-  background-color: #7ec0e4;
+  background-color: #f02a71;
   position: relative;
   left: 2.0%; top: 2.0%;
   border-radius: 50%;
