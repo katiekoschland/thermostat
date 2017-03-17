@@ -41,11 +41,18 @@ $(document).ready(function(){
     $("#currentTemp").attr('class', thermostat.checkEnergyUsage());
   }
 
-    $.get("http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=948bcac04c4c2646c9fcd6f1d5d4b4d0&units=metric",
-        function(data) {
-          $("#outside-temp").text(data.main.temp);
-        })
+  function cityTemp() {
+    var city = $("#city").val()
+    $.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=948bcac04c4c2646c9fcd6f1d5d4b4d0&units=metric",
+    function(data) {
+      $("#outside-temp").text(data.main.temp);
+    })
+  }
+  cityTemp()
 
+  $("#city").on("change", function(){
+    cityTemp()
+  })
 
 
 });

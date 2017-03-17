@@ -1,11 +1,49 @@
 .low {
-  background-color: green;
+  font-size: 45px;
+  position: relative;
+  left: 35%; top: 35%;
 }
 
 .medium {
-  background-color: yellow;
+  font-size: 45px;
+  position: relative;
+  left: 35%; top: 35%;
 }
 
 .high {
-  background-color: red;
+  font-size: 45px;
+  position: relative;
+  left: 35%; top: 35%;
+}
+
+body{ background-color: #7ec0e4}
+
+#outerborder{
+  width: 300px; height: 300px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+#outer{
+  width: 98%; height: 98%;
+  background-color: #f9d00f;
+  position: relative;
+  left: 1.0%; top: 1.0%;
+  border-radius: 50%;
+}
+
+#innerborder{
+  width: 50%; height: 50%;
+  background-color: black;
+  position: relative;
+  left: 25.0%; top: 25.0%;
+  border-radius: 50%;
+}
+
+#inner{
+  width: 96%; height: 96%;
+  background-color: #7ec0e4;
+  position: relative;
+  left: 2.0%; top: 2.0%;
+  border-radius: 50%;
 }
