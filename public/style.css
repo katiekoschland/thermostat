@@ -13,6 +13,12 @@ h1{
 
 }
 
+#weather{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: #fdda16;
+}
+
 .down {
   position: relative;
   left: 0%;
@@ -23,8 +29,15 @@ h1{
 
 .up {
   position: absolute;
-  left: 70%;
+  left: 60%;
   margin-top: 4%;
+  background-color: transparent;
+  border: transparent 0px;
+}
+#reset{
+  position: relative;
+  left: 0%;
+  margin-top: 5%;
   background-color: transparent;
   border: transparent 0px;
 }
@@ -89,9 +102,9 @@ margin: auto;
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
-  left: 2.0%; top: 2.0%;
+  width: 100px;
+  height: 45px;
+  left: -75%; margin-top: 30%;
 }
 
 /* Hide default HTML checkbox */
@@ -113,27 +126,31 @@ margin: auto;
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 40px;
+  width: 45px;
   left: 4px;
-  bottom: 4px;
-  background-color: white;
+  bottom: 2px;
+
+
+  background-image: url('../public/turbine.png');
+  background-repeat: no-repeat;
+  background-position: center;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: black;
+  background-color: #55a44e;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px black;
+  box-shadow: 0 0 1px #55a44e;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(45px);
+  -ms-transform: translateX(45px);
+  transform: translateX(45px);
 }
 
 /* Rounded sliders */

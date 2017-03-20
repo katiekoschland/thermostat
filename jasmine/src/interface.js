@@ -1,6 +1,8 @@
+var thermostat
 $(document).ready(function(){
-  var thermostat = new Thermostat();
+  thermostat = new Thermostat();
     updateTemperature()
+    $("#toggle").click()
 
   // $('h1').text("THERMOSTAT");
   $("#powerSavingMode").text(thermostat.powerSavingMode);
@@ -26,14 +28,24 @@ $(document).ready(function(){
     $("#currentTemp").text(thermostat.currentTemperature);
   })
 
-  $("#psON").on("click", function() {
-    thermostat.powerSavingOn();
-    $("#powerSavingMode").text(thermostat.powerSavingMode);
-  })
+  // $("#psON").on("click", function() {
+  //   thermostat.powerSavingOn();
+  //   $("#powerSavingMode").text(thermostat.powerSavingMode);
+  // })
+  //
+  // $("#psOFF").on("click", function() {
+  //   thermostat.powerSavingOff();
+  //   $("#powerSavingMode").text(thermostat.powerSavingMode);
+  // })
 
-  $("#psOFF").on("click", function() {
-    thermostat.powerSavingOff();
-    $("#powerSavingMode").text(thermostat.powerSavingMode);
+  $("#toggle").on("click", function(){
+
+    if (thermostat.powerSavingMode === true){
+      thermostat.powerSavingOff();
+    } else {
+      thermostat.powerSavingOn();
+    };
+      console.log(thermostat.powerSavingMode)
   })
 
   function updateTemperature() {
