@@ -59,26 +59,26 @@ git clone https://github.com/katiekoschland/thermostat
 cd thermostat
 ````
 
-To run tests:
+To run tests
 
 ````
 cd to the jasmine folder
 Run open SpecRunner.html
 ````
 
-Run thermostat
+To run thermostat
 
 ````
 open views/thermostat.html
 ````
 
 
-# Technologies used:
+# Technologies used
 
 Javascript, Jasmine, jQuery, jQuery AJAX, APIs, CSS, HTML
 
 # Contributors
 
-*Joe Maidman
-*Flora Harvey
-*Bernard Malhame
+* Joe Maidman
+* Flora Harvey
+* Bernard Malhame
