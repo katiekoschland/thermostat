@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-
 <html>
 <head>
   <script src="../jasmine/src/Thermostat.js"></script>
   <link rel="stylesheet" type="text/css" href="../public/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo:800|Orbitron:900" rel="stylesheet">
 </head>
 
 <body>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
 <h1>Thermostat </h1>
+
+<div id= "outerborder">
+  <div id="outer" class="medium">
+
+    <div id= "innerborder">
+      <div id="inner">
+        <button class="down" id="down"><img src="../public/down.png"></button>
+        <button class="up" id="up"><img src="../public/up.png"/> </button>
+        <button type="button" id="reset"><img src="../public/reset.png"></button>
+        <div id="currentTemp">
+      </div>
+
+        <label class="switch">
+          <input id="toggle" type="checkbox">
+          <div class="slider round"></div>
+        </label>
+
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="weather">
   Today's temperature: <span id="outside-temp"</span>
 </div>
-</br>
+
 <div>
   <select id="city">
     <option value="London" >London</option>
@@ -28,45 +42,10 @@
     <option value="Barcelona" >Barcelona</option>
     <option value="TelAviv" >Tel Aviv</option>
   </select>
-
 </div>
-</br>
-  <div id= "outerborder">
-    <div id="outer" class="medium">
 
-      <div id= "innerborder">
-        <div id="inner">
-            <button type="button" id="reset"><img src="../public/reset.png"></button>
-          <div id="currentTemp">
-          </div>
-
-            <button class="down" id="down"><img src="../public/down.png"></button>
-              <button class="up" id="up"><img src="../public/up.png"/>  </button>
-              <label class="switch">
-                  <input id="toggle" type="checkbox">
-                  <div class="slider round"></div>
-                </label>
-
-              <!-- Rounded switch -->
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id = "dateTime">
-  </div>
-
-
-  <!-- <button type="button" id="up">Up</button>
-  <button type="button" id="down">Down</button> -->
-
-
-  <script type="text/javascript" src="../jasmine/src/jquery.js"></script>
-  <script type="text/javascript" src="../jasmine/src/interface.js"></script>
-
+<script type="text/javascript" src="../jasmine/src/jquery.js"></script>
+<script type="text/javascript" src="../jasmine/src/interface.js"></script>
 
 </body>
-
-
 </html>
