@@ -1,9 +1,6 @@
 # Thermostat Challenge
+The challenge is to build the business logic to model a simple thermostat and learn to connect it to a dynamic visual interface using jQuery. The goal was to further develop my knowledge of Javascript.
 ----
-
-The challenge is to build the business logic to model a simple thermostat and learn to connect it to a dynamic visual interface using jQuery.
-
-The goal was to enhance my knowledge of Javascript.
 
 <p align="center">
 <img src="/public/demo.png"/>
