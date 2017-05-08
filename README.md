@@ -8,6 +8,7 @@ The goal was to enhance my knowledge of Javascript.
 <p align="center">
 <img src="/public/demo.png"/>
 </p>
+
 # User Stories
 
 ````
